@@ -13,6 +13,7 @@ namespace ManagerUser
 {
     public partial class Users : System.Web.UI.Page
     {
+        public string obj {get;set;}
         protected void Page_Load(object sender, EventArgs e)
         {
             String uri = "mongodb://ducmanhchy:ducmanh1996@ds013951.mlab.com:13951/databasemongo";
@@ -21,7 +22,7 @@ namespace ManagerUser
             var songs = db.GetCollection<BsonDocument>("songs");
             var result = songs.Find(new BsonDocument()).ToListAsync().GetAwaiter().GetResult();
             //var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync();
-            var obj = result.ToJson();
+            obj = result.ToJson();
             //var obj2 = JsonConvert.SerializeObject(result);
             BsonDocument[] seedData = CreateSeedData();
             //AsyncCrud(seedData).Wait();

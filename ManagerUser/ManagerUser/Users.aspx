@@ -1,15 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="ManagerUser.Users" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="ManagerUser.Users" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <table id="example" class="display" width="100%"></table>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    data: <%=obj%>,
+                    columns: [
+                        { title: "Decade" },
+                        { title: "Artist" },
+                        { title: "Title" },
+                        { title: "WeeksAtOne" }
+                    ]
+                });
+            });
+        });
+    </script>
+</asp:Content>
