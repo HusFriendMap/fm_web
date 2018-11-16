@@ -83,3 +83,13 @@ D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csproj.CoreCompileInputs
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csproj.CopyComplete
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.dll
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.pdb
+D:\fm_web\ManagerUser\ManagerUser\bin\DnsClient.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Bson.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Driver.Core.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Driver.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\System.Buffers.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\DnsClient.xml
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Bson.xml
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Driver.xml
+D:\fm_web\ManagerUser\ManagerUser\bin\MongoDB.Driver.Core.xml
