@@ -13,15 +13,18 @@ namespace ManagerUser
 {
     public partial class Users : System.Web.UI.Page
     {
-        public string obj {get;set;}
+        public string obj { get; private set; }
+        public IMongoDatabase db { get; private set; }
+        public IMongoCollection<BsonDocument> songs { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             String uri = "mongodb://ducmanhchy:ducmanh1996@ds013951.mlab.com:13951/databasemongo";
             var client = new MongoClient(uri);
-            var db = client.GetDatabase("databasemongo");
-            var songs = db.GetCollection<BsonDocument>("songs");
-            var result = songs.Find(new BsonDocument()).ToListAsync().GetAwaiter().GetResult();
-            //var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync();
+            db = client.GetDatabase("databasemongo");
+            songs = db.GetCollection<BsonDocument>("songs");
+
+            var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync().GetAwaiter().GetResult();
             obj = result.ToJson();
             //var obj2 = JsonConvert.SerializeObject(result);
             BsonDocument[] seedData = CreateSeedData();
@@ -29,12 +32,9 @@ namespace ManagerUser
             //them(seedData, db);
         }
 
-        private void them(BsonDocument[] seedData, IMongoDatabase db)
+        private void them(BsonDocument[] seedData)
         {
-            BsonDocument[] songData = seedData;
-            var songs = db.GetCollection<BsonDocument>("songs");
-            songs.InsertManyAsync(songData);
-            throw new NotImplementedException();
+            songs.InsertManyAsync(seedData);
         }
 
         // Extra helper code

@@ -8,10 +8,42 @@
                 $('#example').DataTable({
                     data: <%=obj%>,
                     columns: [
-                        { title: "Decade" },
-                        { title: "Artist" },
-                        { title: "Title" },
-                        { title: "WeeksAtOne" }
+                        {
+                            "width": "20%",
+                            "name": "Decade",
+                            "sTitle": "Decade",
+                
+                            "mData": function (o) {
+                                return o.Decade;
+                            }
+                        },
+                        {
+                            "width": "20%",
+                            "name": "Artist",
+                            "sTitle": "Artist",
+                
+                            "mData": function (o) {
+                                return o.Artist;
+                            }
+                        },
+                        {
+                            "width": "20%",
+                            "name": "Title",
+                            "sTitle": "Tiêu đề",
+                
+                            "mData": function (o) {
+                                return o.Title;
+                            }
+                        },
+                        {
+                            "width": "20%",
+                            "name": "WeeksAtOne",
+                            "sTitle": "Tiêu đề",
+                
+                            "mData": function (o) {
+                                return o.WeeksAtOne;
+                            }
+                        }
                     ]
                 });
             });
