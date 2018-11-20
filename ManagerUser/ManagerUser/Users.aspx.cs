@@ -1,6 +1,8 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.IO;
 using MongoDB.Driver;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +26,14 @@ namespace ManagerUser
             db = client.GetDatabase("databasemongo");
             songs = db.GetCollection<BsonDocument>("songs");
 
-            var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync().GetAwaiter().GetResult();
-            obj = result.ToJson();
+            var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync().GetAwaiter().GetResult().ToJson();
+            var result2 = songs.Find(new BsonDocument()).ToListAsync().GetAwaiter().GetResult();
+            var jsonWriterSettings = new JsonWriterSettings { OutputMode = JsonOutputMode.Strict };
+            //JObject json = JObject.Parse(result2[0].ToJson<BsonDocument>(jsonWriterSettings));
+            //var query_id = Query.EQ("_id", ObjectId.Parse("50ed4e7d5baffd13a44d0153"));
+            //var entity = dbCollection.FindOne(query_id);
+            //return entity.ToString();
+            obj = result2.ToJson(jsonWriterSettings);
             //var obj2 = JsonConvert.SerializeObject(result);
             BsonDocument[] seedData = CreateSeedData();
             //AsyncCrud(seedData).Wait();
@@ -35,6 +43,13 @@ namespace ManagerUser
         private void them(BsonDocument[] seedData)
         {
             songs.InsertManyAsync(seedData);
+        }
+
+        public void sua()
+        {
+            var updateFilter = Builders<BsonDocument>.Filter.Eq("Title", "One Sweet Day");
+            var update = Builders<BsonDocument>.Update.Set("Artist", "Mariah Carey ft. Boyz II Men");
+            songs.UpdateOneAsync(updateFilter, update);
         }
 
         // Extra helper code
