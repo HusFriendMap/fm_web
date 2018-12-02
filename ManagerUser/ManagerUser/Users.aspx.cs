@@ -29,13 +29,7 @@ namespace ManagerUser
             var result = songs.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync().GetAwaiter().GetResult().ToJson();
             var result2 = songs.Find(new BsonDocument()).ToListAsync().GetAwaiter().GetResult();
             var jsonWriterSettings = new JsonWriterSettings { OutputMode = JsonOutputMode.Strict };
-            //JObject json = JObject.Parse(result2[0].ToJson<BsonDocument>(jsonWriterSettings));
-            //var query_id = Query.EQ("_id", ObjectId.Parse("50ed4e7d5baffd13a44d0153"));
-            //var entity = dbCollection.FindOne(query_id);
-            //return entity.ToString();
             obj = result2.ToJson(jsonWriterSettings);
-            //var obj2 = JsonConvert.SerializeObject(result);
-            BsonDocument[] seedData = CreateSeedData();
             //AsyncCrud(seedData).Wait();
             //them(seedData, db);
         }

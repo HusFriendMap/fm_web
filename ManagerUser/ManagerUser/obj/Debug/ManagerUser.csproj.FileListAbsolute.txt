@@ -93,4 +93,4 @@ D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csproj.CopyComplete
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.dll
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.pdb
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Collections.Immutable.dll
-D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csprojResolveAssemblyReference.cache
+D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csprojAssemblyReference.cache

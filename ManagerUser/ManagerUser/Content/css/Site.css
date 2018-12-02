@@ -1,6 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
 }
 
@@ -17,8 +17,15 @@ select,
 textarea {
     max-width: 280px;
 }
-
-
+.text-left{
+    float: left;
+}
+.text-right{
+    float: right;
+}
+.btn-add{
+    margin: 5px 0px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
