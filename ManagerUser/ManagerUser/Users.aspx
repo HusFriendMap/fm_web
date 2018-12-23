@@ -7,17 +7,16 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
+                        <h5 class="modal-title">Thông tin chi tiết</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Modal body text goes here.</p>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -31,13 +30,19 @@
             $(document).ready(function () {
                 $('#example').DataTable({
                     data: <%=obj%>,
+                    "language": {
+                        "info": 'Hiển thị _START_ đến _END_ trên tổng số _TOTAL_ bản ghi',
+                        "lengthMenu": "Hiển thị _MENU_ bản ghi",
+                    },
+                    "lengthMenu": [[5, 10, 20, 30, 50], [5, 10, 20, 30, 50]],
+                    "dom": 'rt<"row"<"col-xs-12 col-sm-4 col-md-2 nopadding"l><"col-xs-12 col-sm-8 col-md-6 nopadding infortotal"i><"col-xs-12 col-sm-12 col-md-4 nopadding"p><"clear">>',
                     columns: [
                         {
-                            "width": "20%",
+                            "width": "20px",
                             "name": "Decade",
                             "sTitle": "Decade",
                             "mData": function (o) {
-                                return '<a href="javascript:;" onclick="View()" data-id="' + o._id.$oid + '">' + o.Decade + '</a>';
+                                return '<a href="javascript:;" onclick="View(this)" data-id="' + o._id.$oid + '">' + o.Decade + '</a>';
                             }
                         },
                         {
@@ -63,12 +68,29 @@
                             "mData": function (o) {
                                 return o.WeeksAtOne;
                             }
+                        },
+                        {
+                            "sTitle": "Sửa",
+                            "width": "20px",
+                            "bSortable": false,
+                            "mData": function (o) {
+                                return '<a href="javascript:;" data-edit="' + o._id.$oid + '" class="btn-edit" title="Sửa"><i class="fas fa-pencil-alt"></i></i></a>'
+                            }
+                        },
+                        {
+                            "sTitle": "Xóa",
+                            "width": "20px",
+                            "bSortable": false,
+                            "mData": function (o) {
+                                return '<a href="javascript:;" data-delete="' + o._id.$oid + '" class="btn-delete" title="Xóa"><i class="fas fa-trash-alt"></i></a>'
+                            }
                         }
                     ]
                 });
             });
         });
-        function View() {
+        function View(elmnt) {
+            loadAjaxContentPostData("/ViewUser.aspx?_id=" + $(elmnt).data("id"), ".modal-body", {});
             $("#myModal").modal();
         }
     </script>
