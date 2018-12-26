@@ -1,3 +1,4 @@
+D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Xml.XPath.XDocument.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\ApplicationInsights.config
 D:\fm_web\ManagerUser\ManagerUser\bin\ManagerUser.dll.config
 D:\fm_web\ManagerUser\ManagerUser\bin\ManagerUser.dll
@@ -20,6 +21,7 @@ D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\Microsoft.DiaSymReader.Native.x86.d
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\Microsoft.VisualBasic.Core.targets
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\Microsoft.Win32.Primitives.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.AppContext.dll
+D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Collections.Immutable.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Console.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Diagnostics.Process.dll
@@ -27,7 +29,6 @@ D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Diagnostics.StackTrace.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.Compression.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.FileSystem.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
-D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.FileSystem.Primitives.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.Pipes.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Reflection.Metadata.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Security.AccessControl.dll
@@ -43,7 +44,6 @@ D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.ValueTuple.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Xml.ReaderWriter.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Xml.XmlDocument.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Xml.XPath.dll
-D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Xml.XPath.XDocument.dll
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\vbc.exe
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\vbc.exe.config
 D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\vbc.rsp
@@ -92,5 +92,4 @@ D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csproj.CoreCompileInputs
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csproj.CopyComplete
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.dll
 D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.pdb
-D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.Collections.Immutable.dll
-D:\fm_web\ManagerUser\ManagerUser\obj\Debug\ManagerUser.csprojAssemblyReference.cache
+D:\fm_web\ManagerUser\ManagerUser\bin\roslyn\System.IO.FileSystem.Primitives.dll

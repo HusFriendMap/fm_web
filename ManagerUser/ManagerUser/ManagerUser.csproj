@@ -146,13 +146,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="action.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Site.css" />
     <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\plugin\Bootstrap\bootstrap-dialog\css\bootstrap-dialog.css" />
+    <Content Include="Content\plugin\Bootstrap\bootstrap-dialog\css\bootstrap-dialog.min.css" />
+    <Content Include="Content\plugin\Bootstrap\bootstrap-dialog\js\bootstrap-dialog.js" />
+    <Content Include="Content\plugin\Bootstrap\bootstrap-dialog\js\bootstrap-dialog.min.js" />
     <Content Include="Content\plugin\Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\plugin\Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\plugin\Bootstrap\css\bootstrap-reboot.css" />
@@ -1937,7 +1938,10 @@
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-brands-400.svg" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-regular-400.svg" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\plugin\jquery-validation-1.19.0\jquery.validate.js" />
+    <Content Include="Content\plugin\jquery-validation-1.19.0\jquery.validate.min.js" />
     <Content Include="Content\Scripts\home.js" />
+    <Content Include="Content\Scripts\jquery-3.3.1.js" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -2016,67 +2020,30 @@
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.woff" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.woff2" />
-    <None Include="Content\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\plugin\Bootstrap\bootstrap-dialog\less\bootstrap-dialog.less" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
-    <Content Include="Content\Scripts\jquery-1.10.2.js" />
-    <Content Include="Content\Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Content\Scripts\modernizr-2.6.2.js" />
-    <Content Include="Content\Scripts\respond.js" />
-    <Content Include="Content\Scripts\respond.min.js" />
-    <Content Include="Content\Scripts\WebForms\DetailsView.js" />
-    <Content Include="Content\Scripts\WebForms\Focus.js" />
-    <Content Include="Content\Scripts\WebForms\GridView.js" />
-    <Content Include="Content\Scripts\WebForms\Menu.js" />
-    <Content Include="Content\Scripts\WebForms\MenuStandards.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
-    <Content Include="Content\Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
-    <Content Include="Content\Scripts\WebForms\SmartNav.js" />
-    <Content Include="Content\Scripts\WebForms\TreeView.js" />
-    <Content Include="Content\Scripts\WebForms\WebForms.js" />
-    <Content Include="Content\Scripts\WebForms\WebParts.js" />
-    <Content Include="Content\Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ManagerUsers\pFormUser.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="Users.aspx" />
-    <Content Include="ViewSwitcher.ascx" />
-    <Content Include="ViewUser.aspx" />
+    <Content Include="ManagerUsers\Users.aspx" />
+    <Content Include="ManagerUsers\ViewUser.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Bundle.config" />
+    <Content Include="Bundle.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="action.aspx.cs">
-      <DependentUpon>action.aspx</DependentUpon>
+    <Compile Include="BaseDA.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="BaseQuery.cs" />
+    <Compile Include="ManagerUsers\Action.ashx.cs">
+      <DependentUpon>Action.ashx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="action.aspx.designer.cs">
-      <DependentUpon>action.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2087,7 +2054,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ManagerUsers\UserQuery.cs" />
+    <Compile Include="pActionBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerUsers\pFormUser.aspx.cs">
+      <DependentUpon>pFormUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerUsers\pFormUser.aspx.designer.cs">
+      <DependentUpon>pFormUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultAction.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2102,25 +2081,20 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Users.aspx.cs">
+    <Compile Include="ManagerUsers\UserEntity.cs" />
+    <Compile Include="ManagerUsers\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users.aspx.designer.cs">
+    <Compile Include="ManagerUsers\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewUser.aspx.cs">
+    <Compile Include="ManagerUsers\UsersDA.cs" />
+    <Compile Include="ManagerUsers\ViewUser.aspx.cs">
       <DependentUpon>ViewUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewUser.aspx.designer.cs">
+    <Compile Include="ManagerUsers\ViewUser.aspx.designer.cs">
       <DependentUpon>ViewUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -2128,8 +2102,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ManagerUsers\Action.ashx" />
     <None Include="packages.config" />
-    <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
