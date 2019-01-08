@@ -7,55 +7,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manager User</title>
-    <link href="/Content/plugin/Kendo/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="/Content/plugin/Kendo/styles/kendo.rtl.min.css" rel="stylesheet" />
-    <link href="/Content/plugin/Kendo/styles/kendo.silver.min.css" rel="stylesheet" />
-    <link href="/Content/plugin/Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-
-    <script src="/Content/Scripts/jquery-3.3.1.js"></script>
-    <script src="/Content/plugin/Kendo/js/kendo.all.min.js"></script>
-    <script src="/Content/Scripts/bootstrap.js"></script>
-    <script src="/Content/plugin/Bootstrap/bootstrap-dialog/js/bootstrap-dialog.js"></script>
-    <script src="/Content/plugin/DataTables/DataTables-1.10.18/js/jquery.dataTables.js"></script>
-    <script src="/Content/plugin/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.js"></script>
-    <script src="/Content/plugin/fontawesome-free-5.5.0-web/js/all.min.js"></script>
-    <script src="/Content/plugin/jquery-validation-1.19.0/jquery.validate.js"></script>
-    <script src="/Content/Scripts/home.js"></script>
-
-
+    <script src="Content/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Content/plugin/DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js"></script>
+    <script src="Content/plugin/DataTables/datatables.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Manager Users</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" runat="server" href="~/">Home</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a runat="server" href="~/ManagerUsers/Users">Users</a></li>
-                </ul>
-            </div>
-            <!--/.navbar-collapse -->
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" runat="server" href="~/">Application name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="container body-content">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
-        <hr />
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %></p>
-        </footer>
-    </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link"  runat="server" href="~/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Contact">Contact</a>
+                    </li>
+                    <%--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>--%>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Users">Users</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
 </body>
 </html>
