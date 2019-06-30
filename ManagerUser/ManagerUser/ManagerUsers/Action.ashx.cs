@@ -46,6 +46,8 @@ namespace ManagerUser
                         if (!string.IsNullOrEmpty(User.DateOfBirth)) { updateValues.Add(Builders<UsersBson>.Update.Set("DateOfBirth", User.DateOfBirth)); }
                         if (Convert.ToInt32(User.Gender) > 0) { updateValues.Add(Builders<UsersBson>.Update.Set("Gender", User.Gender)); }
                         if (!string.IsNullOrEmpty(User.LastLogin)) { updateValues.Add(Builders<UsersBson>.Update.Set("LastLogin", User.LastLogin)); }
+                        if (!string.IsNullOrEmpty(User.Email)) { updateValues.Add(Builders<UsersBson>.Update.Set("Email", User.Email)); }
+                        if (!string.IsNullOrEmpty(User.Phone)) { updateValues.Add(Builders<UsersBson>.Update.Set("Phone", User.Phone)); }
                         UpdateDefinition<UsersBson> update = Builders<UsersBson>.Update.Combine(updateValues);
                         Users.UpdateOne(updateFilter, update);
                     }

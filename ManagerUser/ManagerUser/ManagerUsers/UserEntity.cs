@@ -14,9 +14,11 @@ namespace ManagerUser
         public string LoginName { get; set; }
         public string PassWord { get; set; }
         public int Gender { get; set; }
+        public string Email { get; set; }
         //public DateTime DateOfBirth { get; set; }
         //public DateTime? LastLogin { get; set; }
         public string LastLocal { get; set; }
+        public string Phone { get; set; }
 
         public UserEntity() { }
     }
@@ -26,6 +28,10 @@ namespace ManagerUser
         public ObjectId Id { get; set; }
         [BsonElement("Name")]
         public string Name { get; set; }
+        [BsonElement("Email")]
+        public string Email { get; set; }
+        [BsonElement("Phone")]
+        public string Phone { get; set; }
         [BsonElement("LoginName")]
         public string LoginName { get; set; }
         [BsonElement("PassWord")]

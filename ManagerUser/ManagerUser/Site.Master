@@ -11,6 +11,7 @@
     <link href="/Content/plugin/Kendo/styles/kendo.rtl.min.css" rel="stylesheet" />
     <link href="/Content/plugin/Kendo/styles/kendo.silver.min.css" rel="stylesheet" />
     <link href="/Content/plugin/Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="/Content/plugin/datetime/daterangepicker.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
@@ -24,6 +25,8 @@
     <script src="/Content/plugin/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.js"></script>
     <script src="/Content/plugin/fontawesome-free-5.5.0-web/js/all.min.js"></script>
     <script src="/Content/plugin/jquery-validation-1.19.0/jquery.validate.js"></script>
+    <script src="/Content/plugin/datetime/moment.js"></script>
+    <script src="/Content/plugin/datetime/daterangepicker.js"></script>
     <script src="/Content/Scripts/home.js"></script>
 
 

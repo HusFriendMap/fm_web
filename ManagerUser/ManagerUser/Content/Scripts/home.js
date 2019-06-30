@@ -34,15 +34,27 @@ $(function (even) {
         $('#' + thisID + ' label.required').each(function () {
             $(this).append("(<span class='clsred'>*</span>)");
         });
+
+        $('.input-datetime').daterangepicker({
+            autoUpdateInput: false,
+            singleDatePicker: true,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+
+        $('.input-datetime').on('apply.daterangepicker', function (ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY'));
+        });
+
+        $('.input-datetime').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+        });
     };
     $.fn.closefrmbs = function (settings) {
         $(this).closest("[role=dialog]").modal('hide');
     };
 })(jQuery);
-
-function refeshGrid(gridName) {
-    $("#" + gridName).data("kendoGrid").dataSource.read();
-}
 
 function openDialogView(stitle, urlpageLoad, data, size, funcCallBack) {
     BootstrapDialog.show({
