@@ -493,6 +493,9 @@
     <Content Include="Content\plugin\DataTables\Select-1.2.6\js\select.jqueryui.min.js" />
     <Content Include="Content\plugin\DataTables\Select-1.2.6\js\select.semanticui.js" />
     <Content Include="Content\plugin\DataTables\Select-1.2.6\js\select.semanticui.min.js" />
+    <Content Include="Content\plugin\datetime\daterangepicker.css" />
+    <Content Include="Content\plugin\datetime\daterangepicker.js" />
+    <Content Include="Content\plugin\datetime\moment.js" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\css\all.css" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\css\all.min.css" />
     <Content Include="Content\plugin\fontawesome-free-5.5.0-web\css\brands.css" />
